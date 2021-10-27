@@ -8,9 +8,9 @@ function PopupWithForm(props) {
             <form className="popup__form" method="post" name={props.name}>
                 <h3 className="popup__name">{props.title}</h3>
                 {props.children}
-                <button className="popup__button" type="submit" aria-label="Да">Сохранить</button>
+                <button className="popup__button" type="submit" aria-label="Да">{props.buttonText}</button>
             </form>
-            </div> 
+            </div>
         </div>
     )
 }

@@ -7,7 +7,7 @@ function Main(props) {
     const [userName, setUserName] = useState();
     const [userDescription, setUserDescription] = useState();
     const [userAvatar, setUserAvatar] = useState();
-    
+
 
     useEffect(() => {
         api.getUserData()
@@ -15,6 +15,9 @@ function Main(props) {
             setUserName(res.name);
             setUserDescription(res.about);
             setUserAvatar(res.avatar)
+        })
+        .catch((err) => {
+          console.log(err)
         })
     }, [])
 
@@ -25,9 +28,12 @@ function Main(props) {
         .then((res) => {
             setCards(res)
         })
+        .catch((err) => {
+          console.log(err)
+        })
     }, [])
 
-    
+
 
     return (
     <>
@@ -47,8 +53,8 @@ function Main(props) {
             <button className="profile__add-button" type="button" aria-label="Добавление фотографий" onClick={props.onAddPlace}></button>
         </section>
         <section className="elements">
-        {cards.map((item, i) => (
-            <Card onCardClick={props.onCardClick} card={item}/>
+        {cards.map((item) => (
+            <Card onCardClick={props.onCardClick} key={item._id}  card={item}/>
         ))}
         </section>
     </>
