@@ -3,7 +3,7 @@
     this.baseUrl = options.baseUrl;
     this.headers = options.headers;
   }
-  
+
 
   _checkFetch(res) {
       if (res.ok) {
