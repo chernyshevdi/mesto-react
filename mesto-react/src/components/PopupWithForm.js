@@ -22,7 +22,6 @@ function PopupWithForm(props) {
             className="popup__button"
             type="submit"
             aria-label="Да"
-            //onClick={props.onClose}
           >
             {props.buttonText}
           </button>

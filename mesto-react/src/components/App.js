@@ -163,7 +163,6 @@ function App() {
             isOpen={isAddPlacePopupOpen}
             onClose={closeAllPopups}
             onAddPlace={handleUpdateCard}
-
           />
 
           <EditAvatarPopup
