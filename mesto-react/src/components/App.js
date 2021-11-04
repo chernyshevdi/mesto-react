@@ -47,7 +47,6 @@ function App() {
       ? api
           .addLike(card._id)
           .then((newCard) => {
-            console.log(newCard);
             setCards((state) =>
               state.map((c) => (c._id === card._id ? newCard : c))
             );

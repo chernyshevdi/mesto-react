@@ -15,10 +15,10 @@ function EditAvatarPopup(props) {
   return (
     <PopupWithForm
       name={"avatar"}
-      title={"Вы уверены?"}
+      title={"Обновить аватар?"}
       isOpen={props.isOpen ? "popup_opened" : ""}
       onClose={props.onClose}
-      buttonText={"Да"}
+      buttonText={"Сохранить"}
       onSubmit={handleSubmit}
     >
       <input
